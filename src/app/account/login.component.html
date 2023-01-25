@@ -1,5 +1,8 @@
 ﻿<div class="card">
-    <h4 class="card-header">Login</h4>
+    <h4 class="card-header">
+      <img src="../../../assets/icons/inamhi.png" alt="inahmilogo"  style="width:70px;height:40px;"/>
+      Login
+    </h4>
     <div class="card-body">
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="mb-3">
@@ -21,7 +24,7 @@
                     <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
                     Login
                 </button>
-                <a routerLink="../register" class="btn btn-link">Registro</a>
+                <a routerLink="../register" class="btn btn-link">Formulario</a>
             </div>
         </form>
     </div>
