@@ -1,42 +1,49 @@
-﻿<div class="card">
-    <h4 class="card-header">Register</h4>
+﻿
+<div class="card">
+    <h4 class="card-header">Formulario para ingresar datos meteorológicos</h4>
     <div class="card-body">
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="mb-3">
-                <label class="form-label">First Name</label>
-                <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-                    <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                <label for="station">Select a Station : </label>
+                <select id="stations" name="stationlist" form="stationform">
+                  <option value="Quito">Quito</option>
+                  <option value="Loja">Loja</option>
+                  <option value="Cuenca">Cuenca</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Temperatura-Max</label>
+                <input type="float" formControlName="tempmax" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                <div *ngIf="submitted && f.tempmax.errors" class="invalid-feedback">
+                    <div *ngIf="f.tempmax.errors.required">Temperatura-Max is required</div>
                 </div>
             </div>
             <div class="mb-3">
-                <label class="form-label">Last Name</label>
-                <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
-                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-                    <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                <label class="form-label">Temperatura-Min</label>
+                <input type="float" formControlName="tempmin" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                <div *ngIf="submitted && f.tempmin.errors" class="invalid-feedback">
+                    <div *ngIf="f.tempmin.errors.required">Temperatura-Min is required</div>
                 </div>
             </div>
             <div class="mb-3">
-                <label class="form-label">Username</label>
-                <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
-                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-                    <div *ngIf="f.username.errors.required">Username is required</div>
-                </div>
+                <label class="form-label">Select Percipitation</label>
+                <br>
+                <input type="radio" id="si" name="percipitation" value="si"
+             checked>
+      <label for="si">Si</label>
+    </div>
+    <div>
+      <input type="radio" id="No" name="percipitation" value="No">
+      <label for="No">No</label>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Password</label>
-                <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                    <div *ngIf="f.password.errors.required">Password is required</div>
-                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-                </div>
-            </div>
+            <br><br>
             <div>
                 <button [disabled]="loading" class="btn btn-primary">
                     <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
-                    Register
+                    Entregar
                 </button>
-                <a routerLink="../login" class="btn btn-link">Cancel</a>
+                <a routerLink="../login" class="btn btn-link">Cancelar</a>
+                <input type="reset" value="Reset">
             </div>
         </form>
     </div>
