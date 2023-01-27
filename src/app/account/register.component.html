@@ -1,9 +1,11 @@
 ﻿<header class="header">
-  <a href="" class="logo">INAMHI</a>
+  <a href="" class="logo">
+    <img src="../../../assets/icons/inamhi.png" alt="inahmilogo"  style="width:120px;height:55px;"/></a>
+
   <input class="menu-btn" type="checkbox" id="menu-btn" />
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
   <ul class="menu">
-    <li><a routerLink="../user" class="btn btn-link">Register User</a></li>
+    <li><a routerLink="users" class="btn btn-link">Register Users</a></li>
     <li><a routerLink="../viewuser" class="btn btn-link">View Users</a></li>
     <li><a routerLink="../viewprognostic" class="btn btn-link">View Register Prognostic</a></li>
     <li><a routerLink="../login" class="btn btn-link">Login</a></li>
@@ -11,65 +13,47 @@
 </header>
 
 
-
 <div class="card">
-    <h4 class="card-header">Formulario para ingresar datos meteorológicos</h4>
-    <div class="card-body">
-        <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            <div class="mb-3">
-                <label for="station">Select a Station : </label>
-                <select id="stations" name="stationlist" form="stationform">
-                  <option value="Quito">Esmeraldas</option>
-                  <option value="Loja">Santa Domingo</option>
-                  <option value="Cuenca">Quevedo</option>
-                  <option value="Cuenca">Manta</option>
-                  <option value="Cuenca">Guayaquil</option>
-                  <option value="Cuenca">Salinas</option>
-                  <option value="Cuenca">Santa Rosa</option>
-                  <option value="Cuenca">San Cristobal</option>
-                  <option value="Cuenca">Baltra</option>
-                  <option value="Cuenca">Tulcan</option>
-                  <option value="Cuenca">Quito</option>
-                  <option value="Cuenca">Latacunga</option>
-                  <option value="Cuenca">Ambato</option>
-                  <option value="Cuenca">Riobamba</option>
-                  <option value="Cuenca">Tena</option>
-                  <option value="Cuenca">Macas</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Temperatura-Max</label>
-                <input type="float" formControlName="tempmax" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
-                <div *ngIf="submitted && f.tempmax.errors" class="invalid-feedback">
-                    <div *ngIf="f.tempmax.errors.required">Temperatura-Max is required</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Temperatura-Min</label>
-                <input type="float" formControlName="tempmin" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
-                <div *ngIf="submitted && f.tempmin.errors" class="invalid-feedback">
-                    <div *ngIf="f.tempmin.errors.required">Temperatura-Min is required</div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Select Percipitation</label>
-                <br>
-                <input type="radio" id="si" name="percipitation" value="si"
-             checked>
-      <label for="si">Si</label>
-    </div>
-    <div>
-      <input type="radio" id="No" name="percipitation" value="No">
-      <label for="No">No</label>
-            </div>
-            <br><br>
-            <div>
-                <button [disabled]="loading" class="btn btn-primary">
-                    <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
-                    Entregar
-                </button>
-                <input type="reset" value="Reset">
-            </div>
-        </form>
-    </div>
+  <div class="BoxForm">
+  <h4 class="card-header">Register</h4>
+  <div class="card-body">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+              <label class="form-label">First Name</label>
+              <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+              <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                  <div *ngIf="f.firstName.errors.required">First Name is required</div>
+              </div>
+          </div>
+          <div class="mb-3">
+              <label class="form-label">Last Name</label>
+              <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+              <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                  <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+              </div>
+          </div>
+          <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                  <div *ngIf="f.username.errors.required">Username is required</div>
+              </div>
+          </div>
+          <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">Password is required</div>
+                  <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+          </div>
+          <div>
+              <button [disabled]="loading" class="btn btn-primary">
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                  Register
+              </button>
+              <a routerLink="../login" class="btn btn-link">Cancel</a>
+          </div>
+      </form>
+  </div>
 </div>

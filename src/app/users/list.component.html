@@ -1,5 +1,20 @@
-﻿<h1>Users</h1>
-<a routerLink="add" class="btn btn-sm btn-success mb-2">Add User</a>
+﻿<header class="header">
+  <a href="" class="logo">
+    <img src="../../../assets/icons/inamhi.png" alt="inahmilogo"  style="width:120px;height:55px;"/></a>
+
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a routerLink="/users" class="btn btn-link">Register Users</a></li>
+    <li><a routerLink="../viewuser" class="btn btn-link">View Users</a></li>
+    <li><a routerLink="../viewprognostic" class="btn btn-link">View Register Prognostic</a></li>
+    <li><a routerLink="../../app/account/login" class="btn btn-link">Login</a></li>
+  </ul>
+</header>
+
+<div class="card">
+<h1>Users</h1>
+<a routerLink="add" class="btn btn-sm btn-success mb-2" >Add User</a>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -29,3 +44,4 @@
         </tr>
     </tbody>
 </table>
+</div>

@@ -3,13 +3,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AccountService, AlertService } from '@app/_services';
+import { AccountService, AlertService } from '../_services';
 
 @Component({
   selector: 'app-header',
-  templateUrl: 'register.component.html',
-styleUrls: ['./register.component.css']
- })
+templateUrl: 'register.component.html',
+styleUrls: ['./register.component.css'],
+})
 export class RegisterComponent implements OnInit {
     form!: FormGroup;
     loading = false;
@@ -53,6 +53,9 @@ export class RegisterComponent implements OnInit {
                 next: () => {
                     this.alertService.success('Registration successful', { keepAfterRouteChange: true });
                     this.router.navigate(['../login'], { relativeTo: this.route });
+                    this.router.navigate(['../users'], { relativeTo: this.route });
+                    this.router.navigate(['../viewuser'], { relativeTo: this.route });
+                    this.router.navigate(['../viewprognostic'], { relativeTo: this.route });
                 },
                 error: error => {
                     this.alertService.error(error);

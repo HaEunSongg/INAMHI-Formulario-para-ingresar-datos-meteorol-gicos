@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LayoutComponent } from './layout.component';
-import { LoginComponent } from './login.component';
-import { RegisterComponent } from './register.component';
+import { LayoutComponent } from '../account/layout.component';
+import { LoginComponent } from '../account/login.component';
+import { RegisterComponent } from '../account/register.component';
 
-import { ListComponent } from '../../app/users/list.component';
-import { AddEditComponent } from '../../app/users/add-edit.component';
+import { ListComponent } from '../users/list.component';
+import { AddEditComponent } from '../users/add-edit.component';
+import { FormComponent } from './form.component';
 
 const routes: Routes = [
     {
@@ -26,4 +27,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class AccountRoutingModule { }
+export class FormRoutingModule { }

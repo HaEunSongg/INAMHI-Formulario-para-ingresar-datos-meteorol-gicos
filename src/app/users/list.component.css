@@ -7,7 +7,7 @@ a {
 .header {
   font-family: Helvetica, sans-serif;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
-  width: 100%;
+  width: 97%;
 }
 
 .header ul {
@@ -137,19 +137,10 @@ a {
     display: none;
   }
 }
-
-.card {
-  margin-top: 5rem;
-  position: fixed;
-  width: 100%;
-  align-items: center;
+.card{
+ margin-top:5%;
 }
 
-.BoxForm{
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
-  width: 30%;
-}
-
-.btn-primary {
-  float: right
-}
+.btn-sm{
+  width:80px;
+ }

@@ -1,0 +1,11 @@
+.card{
+  float: center;
+  margin-top: 10%;
+  width:30%;
+  margin-left: 35%;
+  position: absolute;
+}
+
+.divLoginHeader{
+  margin-bottom: 2rem;
+}
