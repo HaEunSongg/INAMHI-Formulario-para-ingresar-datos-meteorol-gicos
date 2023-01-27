@@ -15,6 +15,13 @@
                 <div *ngIf="f.lastName.errors.required">Last Name is required</div>
             </div>
         </div>
+        <div class="mb-3 col">
+          <label class="form-label">Work Place</label>
+          <input type="text" formControlName="workplace" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.workplace.errors }" />
+          <div *ngIf="submitted && f.workplace.errors" class="invalid-feedback">
+              <div *ngIf="f.workplace.errors.required">First Name is required</div>
+          </div>
+      </div>
     </div>
     <div class="row">
         <div class="mb-3 col">

@@ -10,21 +10,21 @@ import { AddEditComponent } from '../users/add-edit.component';
 import { FormComponent } from './form.component';
 
 const routes: Routes = [
-    {
-        path: '', component: LayoutComponent,
-        children: [
-            { path: 'login', component: LoginComponent },
-            { path: 'register', component: RegisterComponent },
-            { path: '', component: ListComponent },
-            { path: 'add', component: AddEditComponent },
-            { path: 'edit/:id', component: AddEditComponent }
-
-        ]
-    }
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: '', component: ListComponent },
+      { path: 'add', component: AddEditComponent },
+      { path: 'edit/:id', component: AddEditComponent },
+    ],
+  },
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class FormRoutingModule { }
+export class FormRoutingModule {}

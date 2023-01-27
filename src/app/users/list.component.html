@@ -6,7 +6,7 @@
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
   <ul class="menu">
     <li><a routerLink="/users" class="btn btn-link">Register Users</a></li>
-    <li><a routerLink="../viewuser" class="btn btn-link">View Users</a></li>
+    <li><a routerLink="/users" class="btn btn-link">Register Prognostic</a></li>
     <li><a routerLink="../viewprognostic" class="btn btn-link">View Register Prognostic</a></li>
     <li><a routerLink="/login" class="btn btn-link">Login</a></li>
   </ul>
@@ -18,9 +18,10 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th style="width: 30%">First Name</th>
-            <th style="width: 30%">Last Name</th>
-            <th style="width: 30%">Username</th>
+            <th style="width: 25%">First Name</th>
+            <th style="width: 25%">Last Name</th>
+            <th style="width: 20%">Work Place</th>
+            <th style="width: 20%">Username</th>
             <th style="width: 10%"></th>
         </tr>
     </thead>
@@ -28,6 +29,7 @@
         <tr *ngFor="let user of users">
             <td>{{user.firstName}}</td>
             <td>{{user.lastName}}</td>
+            <td>{{user.workplace}}</td>
             <td>{{user.username}}</td>
             <td style="white-space: nowrap">
                 <a routerLink="edit/{{user.id}}" class="btn btn-sm btn-primary me-1">Edit</a>

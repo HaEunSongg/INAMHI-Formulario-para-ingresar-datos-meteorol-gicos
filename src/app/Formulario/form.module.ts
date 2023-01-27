@@ -6,13 +6,7 @@ import { FormRoutingModule } from './form-routing.module';
 import { FormComponent } from './form.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        ReactiveFormsModule,
-        FormRoutingModule
-    ],
-    declarations: [
-      FormComponent
-    ]
+  imports: [CommonModule, ReactiveFormsModule, FormRoutingModule],
+  declarations: [FormComponent],
 })
-export class UsersModule { }
+export class UsersModule {}
