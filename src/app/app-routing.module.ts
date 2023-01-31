@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'form', component: FormComponent,  canActivate: [AuthGuard] },
   { path: 'viewprog', loadChildren: formlistmModule, canActivate: [AuthGuard] },
-  
+
   // otherwise redirect to home
   { path: '**', redirectTo: '' },
 ];
