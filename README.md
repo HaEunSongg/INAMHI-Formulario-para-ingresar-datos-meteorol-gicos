@@ -9,7 +9,7 @@ In this sense, the goal of this program is to maintain an internal process and a
 This Application allows daily entry of records of meteorological variables (minimum, maximum, and precipitation temperatures), 
 the application allows access to different forecasters and,shows the data in tables
   
-Login 
+**Login** 
 
 <img width="530" alt="loginpage" src="https://user-images.githubusercontent.com/112583089/215850760-8dc76303-4bf7-4b56-9843-6499dad17169.png">
 
