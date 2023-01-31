@@ -1,4 +1,4 @@
-﻿import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -6,11 +6,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AccountService } from '@app/_services';
 
 @Component({
-  templateUrl: 'list.component.html',
-  styleUrls: ['./list.component.css'],
+  templateUrl: 'formlist.component.html',
+  styleUrls: ['./formlist.component.css'],
 })
-export class ListComponent implements OnInit {
+export class FormListComponent implements OnInit {
   users?: any[];
+forms: any;
 
   constructor(
     private accountService: AccountService,
@@ -23,16 +24,16 @@ export class ListComponent implements OnInit {
       .getAll()
       .pipe(first())
       .subscribe(
-        (users) => (this.users = users));
+        (forms) => (this.forms = forms));
 
   }
 
   deleteUser(id: string) {
-    const user = this.users!.find((x) => x.id === id);
-    user.isDeleting = true;
+    const form = this.forms!.find((x: { id: string; }) => x.id === id);
+    form.isDeleting = true;
     this.accountService
       .delete(id)
       .pipe(first())
-      .subscribe(() => (this.users = this.users!.filter((x) => x.id !== id)));
+      .subscribe(() => (this.forms = this.forms!.filter((x: { id: string; }) => x.id !== id)));
   }
 }

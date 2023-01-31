@@ -56,6 +56,7 @@ export class RegisterComponent implements OnInit {
                     this.router.navigate(['../users'], { relativeTo: this.route });
                     this.router.navigate(['../viewuser'], { relativeTo: this.route });
                     this.router.navigate(['../viewprognostic'], { relativeTo: this.route });
+                    this.router.navigate(['../form'], { relativeTo: this.route });
                 },
                 error: error => {
                     this.alertService.error(error);

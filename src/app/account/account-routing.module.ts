@@ -7,6 +7,7 @@ import { RegisterComponent } from './register.component';
 
 import { ListComponent } from '../../app/users/list.component';
 import { AddEditComponent } from '../../app/users/add-edit.component';
+import { User } from '@app/_models';
 
 const routes: Routes = [
     {
@@ -14,9 +15,9 @@ const routes: Routes = [
         children: [
             { path: 'login', component: LoginComponent },
             { path: 'register', component: RegisterComponent },
-            { path: '', component: ListComponent },
             { path: 'add', component: AddEditComponent },
-            { path: 'edit/:id', component: AddEditComponent }
+            { path: 'edit/:id', component: AddEditComponent },
+            { path: 'users', component: ListComponent }
 
         ]
     }

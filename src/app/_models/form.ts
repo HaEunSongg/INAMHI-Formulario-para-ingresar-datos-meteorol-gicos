@@ -4,5 +4,6 @@ export class Form {
   tempmax?: GLfloat;
   tempmin?: GLfloat;
   percipitation?: string;
+  username?: string;
   token?: string;
 }

@@ -1,0 +1,80 @@
+﻿<h1>Add & Edit datos meteorológicos </h1>
+<br><br>
+<form *ngIf="!loading" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="mb-3 col">
+      <label class="form-label">Date: &nbsp; &nbsp;</label>
+      <input type="datetime-local" id="datetime" name="datetime">
+    </div>
+    <div class="mb-3 col">
+      <label class="form-label"> Station : &nbsp; &nbsp; </label>
+      <select id="stations" name="stationlist" form="stationform">
+        <option value="Quito">Esmeraldas</option>
+        <option value="Loja">Santa Domingo</option>
+        <option value="Cuenca">Quevedo</option>
+        <option value="Cuenca">Manta</option>
+        <option value="Cuenca">Guayaquil</option>
+        <option value="Cuenca">Salinas</option>
+        <option value="Cuenca">Santa Rosa</option>
+        <option value="Cuenca">San Cristobal</option>
+        <option value="Cuenca">Baltra</option>
+        <option value="Cuenca">Tulcan</option>
+        <option value="Cuenca">Quito</option>
+        <option value="Cuenca">Latacunga</option>
+        <option value="Cuenca">Ambato</option>
+        <option value="Cuenca">Riobamba</option>
+        <option value="Cuenca">Tena</option>
+        <option value="Cuenca">Macas</option>
+      </select>
+    </div>
+    <div class="row">
+      <div class="mb-3 col">
+        <label class="form-label">Temp-Max</label>
+        <input type="text" formControlName="tempmax" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.tempmax.errors }" />
+        <div *ngIf="submitted && f.tempmax.errors" class="invalid-feedback">
+          <div *ngIf="f.tempmax.errors.required">Temp-Max is required</div>
+        </div>
+      </div>
+      <div class="mb-3 col">
+        <label class="form-label">Temp-Min</label>
+        <input type="text" formControlName="tempmin" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.tempmin.errors }" />
+        <div *ngIf="submitted && f.tempmin.errors" class="invalid-feedback">
+          <div *ngIf="f.tempmin.errors.required">Temp-Min is required</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 col">
+      <label class="form-label">Percipitation</label>
+      <br>
+      <input type="radio" id="si" name="percipitation" value="si" checked>
+      <label for="si">Sí</label>
+    </div>
+    <div>
+      <input type="radio" id="No" name="percipitation" value="No">
+      <label for="No">No</label>
+    </div>
+  </div>
+  <br>
+  <div class="mb-3 col">
+    <label class="form-label">Username</label>
+    <input type="text" formControlName="username" class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+      <div *ngIf="f.username.errors.required">Username is required</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <button [disabled]="submitting" class="btn btn-primary">
+      <span *ngIf="submitting" class="spinner-border spinner-border-sm me-1"></span>
+      Save
+    </button>
+    <a routerLink="/viewprog" class="btn btn-link">Cancel</a>
+  </div>
+</form>
+<div *ngIf="loading" class="text-center m-5">
+  <span class="spinner-border spinner-border-lg align-center"></span>
+</div>

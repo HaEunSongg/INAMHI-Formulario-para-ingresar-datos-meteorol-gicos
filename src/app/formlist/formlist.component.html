@@ -1,0 +1,54 @@
+<header class="header">
+  <a href="" class="logo">
+    <img src="../../../assets/icons/inamhi.png" alt="inahmilogo"  style="width:120px;height:55px;"/></a>
+
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a routerLink="/form" class="btn btn-link">Register Prognostic</a></li>
+    <li><a routerLink="/users" class="btn btn-link">View Users</a></li>
+    <li><a routerLink="/login" class="btn btn-link">Login</a></li>
+  </ul>
+</header>
+
+<div class="card">
+<h1>Datos meteorológicos</h1>
+<a routerLink="add" class="btn btn-sm btn-success mb-2" >Add Data</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 15%">Input Date</th>
+            <th style="width: 15%">Date</th>
+            <th style="width: 15%">Station</th>
+            <th style="width: 15%">Temp-Max</th>
+            <th style="width: 15%">Temp-Min</th>
+            <th style="width: 10%">Percipitation</th>
+            <th style="width: 15%">User</th>
+            <th style="width: 10%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let form of forms">
+            <td>{{form.inputdate}}</td>
+            <td>{{form.date}}</td>
+            <td>{{form.station}}</td>
+            <td>{{form.tempmax}}</td>
+            <td>{{form.tempmin}}</td>
+            <td>{{form.percipitation}}</td>
+            <td>{{form.firstName}}</td>
+            <td style="white-space: nowrap">
+                <a routerLink="edit/{{forms.id}}" class="btn btn-sm btn-primary me-1">Edit</a>
+                <button (click)="deleteUser(form.id)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="form.isDeleting">
+                    <span *ngIf="form.isDeleting" class="spinner-border spinner-border-sm"></span>
+                    <span *ngIf="!form.isDeleting">Delete</span>
+                </button>
+            </td>
+        </tr>
+        <tr *ngIf="!forms">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

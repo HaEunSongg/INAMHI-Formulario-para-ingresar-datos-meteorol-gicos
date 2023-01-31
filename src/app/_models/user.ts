@@ -4,5 +4,6 @@
     password?: string;
     firstName?: string;
     lastName?: string;
+    workplace?: string;
     token?: string;
 }

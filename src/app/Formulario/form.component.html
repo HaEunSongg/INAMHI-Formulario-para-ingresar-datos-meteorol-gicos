@@ -5,10 +5,9 @@
   <input class="menu-btn" type="checkbox" id="menu-btn" />
   <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
   <ul class="menu">
-    <li><a routerLink="../user" class="btn btn-link">Register Users</a></li>
-    <li><a routerLink="../viewuser" class="btn btn-link">View Users</a></li>
-    <li><a routerLink="../viewprognostic" class="btn btn-link">View Register Prognostic</a></li>
-    <li><a routerLink="../login" class="btn btn-link">Login</a></li>
+    <li><a routerLink="/users" class="btn btn-link">View Users</a></li>
+    <li><a routerLink="/viewprog" class="btn btn-link">View Register Prognostic</a></li>
+    <li><a routerLink="/login" class="btn btn-link">Login</a></li>
   </ul>
 </header>
 
@@ -20,6 +19,9 @@
     <div class="card-body">
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="mb-3">
+          <label class="form-label">Date: &nbsp; &nbsp;</label>
+          <input type="datetime-local" id="datetime" name="datetime">
+          <br><br>
           <label for="station">Select a Station : </label>
           <select id="stations" name="stationlist" form="stationform">
             <option value="Quito">Esmeraldas</option>
@@ -42,13 +44,14 @@
         </div>
         <div class="mb-3">
           <label class="form-label">Temperatura-Max</label>
-
+          <input type="text" formControlName="tempmax" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.tempmax.errors }" />
           <div *ngIf="submitted && f.tempmax.errors" class="invalid-feedback">
             <div *ngIf="f.tempmax.errors.required">Temperatura-Max is required</div>
           </div>
         </div>
         <div class="mb-3">
           <label class="form-label">Temperatura-Min</label>
+          <input type="text" formControlName="tempmin" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.tempmin.errors }" />
           <div *ngIf="submitted && f.tempmin.errors" class="invalid-feedback">
             <div *ngIf="f.tempmin.errors.required">Temperatura-Min is required</div>
           </div>
@@ -57,7 +60,7 @@
           <label class="form-label">Select Percipitation</label>
           <br>
           <input type="radio" id="si" name="percipitation" value="si" checked>
-          <label for="si">Si</label>
+          <label for="si">Sí</label>
         </div>
         <div>
           <input type="radio" id="No" name="percipitation" value="No">
@@ -73,5 +76,6 @@
       </form>
     </div>
   </div>
-
 </div>
+
+<router-outlet></router-outlet>

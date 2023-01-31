@@ -6,7 +6,6 @@ import { first } from 'rxjs/operators';
 import { AccountService, AlertService } from '@app/_services';
 
 @Component({
-  selector: 'app-header',
   templateUrl: 'form.component.html',
   styleUrls: ['./form.component.css'],
 })
@@ -58,6 +57,8 @@ export class FormComponent implements OnInit {
             keepAfterRouteChange: true,
           });
           this.router.navigate(['../login'], { relativeTo: this.route });
+          this.router.navigate(['../users'], { relativeTo: this.route });
+          this.router.navigate(['../formlist'], { relativeTo: this.route });
         },
         error: (error) => {
           this.alertService.error(error);

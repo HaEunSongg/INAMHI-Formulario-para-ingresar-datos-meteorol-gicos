@@ -9,4 +9,4 @@ import { FormComponent } from './form.component';
   imports: [CommonModule, ReactiveFormsModule, FormRoutingModule],
   declarations: [FormComponent],
 })
-export class UsersModule {}
+export class FormsModule {}
