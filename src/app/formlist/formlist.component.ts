@@ -37,3 +37,6 @@ forms: any;
       .subscribe(() => (this.forms = this.forms!.filter((x: { id: string; }) => x.id !== id)));
   }
 }
+
+const now = new Date();
+console.log(now.toUTCString());

@@ -6,11 +6,15 @@ import { map } from 'rxjs/operators';
 
 import { environment } from '@environments/environment';
 import { User } from '@app/_models';
+import { Form } from '@app/_models';
 
 @Injectable({ providedIn: 'root' })
 export class AccountService {
     private userSubject: BehaviorSubject<User | null>;
     public user: Observable<User | null>;
+
+    private formSubject: BehaviorSubject<Form | null>;
+    public form: Observable<Form | null>;
 
     constructor(
         private router: Router,
@@ -18,6 +22,9 @@ export class AccountService {
     ) {
         this.userSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('user')!));
         this.user = this.userSubject.asObservable();
+
+        this.formSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('form')!));
+        this.form = this.formSubject.asObservable();
     }
 
     public get userValue() {
@@ -80,3 +87,5 @@ export class AccountService {
             }));
     }
 }
+
+
