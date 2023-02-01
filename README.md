@@ -28,11 +28,21 @@ the application allows access to different forecasters and,shows the data in tab
 
 **View Users** 
 
+<img width="904" alt="viewusers" src="https://user-images.githubusercontent.com/112583089/216122460-d891f50b-c109-4ffa-9de0-2744fd71b9ae.png">
+
+
 
 **Form to Add Meterological Data** 
 
+<img width="692" alt="formpage" src="https://user-images.githubusercontent.com/112583089/216122426-67062bd3-6d8b-487c-b8d8-84c1eb844d6a.png">
+
+
 
 **View Prognostics** 
+
+<img width="908" alt="metroloview" src="https://user-images.githubusercontent.com/112583089/216122488-f2edee3d-ce43-4d92-bae0-1aa19273eeac.png">
+
+
 
 
 Documentation at https://jasonwatmore.com/post/2022/11/29/angular-14-user-registration-and-login-example-tutorial
