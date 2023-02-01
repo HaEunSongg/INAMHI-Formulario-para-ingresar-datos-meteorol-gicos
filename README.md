@@ -45,11 +45,12 @@ the application allows access to different forecasters and,shows the data in tab
 
 ## Programs 
 
-**Front-End**
+**Front-End** :
 Angular 14 / typescript/ Html / Css
 
-**Back-End**
+**Back-End** :
 PostgreSQL
 
 Documentation : https://jasonwatmore.com/post/2022/11/29/angular-14-user-registration-and-login-example-tutorial
+
 Button Style: https://getcssscan.com/css-buttons-examples
