@@ -10,14 +10,18 @@ This Application allows daily entry of records of meteorological variables (mini
 the application allows access to different forecasters and,shows the data in tables
   
 **Login** 
+<img width="692" alt="loginpage" src="https://user-images.githubusercontent.com/112583089/216120816-6ee18054-b6be-4e32-94f3-04d642fb8012.png">
 
-<img width="530" alt="loginpage" src="https://user-images.githubusercontent.com/112583089/215850760-8dc76303-4bf7-4b56-9843-6499dad17169.png">
 
 *Register** 
-*<img width="922" alt="register" src="https://user-images.githubusercontent.com/112583089/216102192-480fd0fb-1e65-401b-b063-c6e97b6d2712.png">
+<img width="689" alt="register" src="https://user-images.githubusercontent.com/112583089/216120846-c48b00a7-198a-4640-888e-061cace489d6.png">
+
 
 
 **Welcome Page** 
+
+<img width="452" alt="welcomepage" src="https://user-images.githubusercontent.com/112583089/216120879-0d75c8ba-0c32-4f08-8c03-0caf4bbbc8fc.png">
+
 
 **View Users** 
 
