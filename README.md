@@ -38,7 +38,7 @@ the application allows access to different forecasters and,shows the data in tab
 
 
 
-**View Prognostics** 
+**View Prognostics Meterological Data** 
 
 <img width="908" alt="metroloview" src="https://user-images.githubusercontent.com/112583089/216122488-f2edee3d-ce43-4d92-bae0-1aa19273eeac.png">
 
