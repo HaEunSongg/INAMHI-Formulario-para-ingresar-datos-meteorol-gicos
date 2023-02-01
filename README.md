@@ -13,7 +13,9 @@ the application allows access to different forecasters and,shows the data in tab
 
 <img width="530" alt="loginpage" src="https://user-images.githubusercontent.com/112583089/215850760-8dc76303-4bf7-4b56-9843-6499dad17169.png">
 
-**Register** 
+*Register** 
+*<img width="922" alt="register" src="https://user-images.githubusercontent.com/112583089/216102192-480fd0fb-1e65-401b-b063-c6e97b6d2712.png">
+
 
 **Welcome Page** 
 
