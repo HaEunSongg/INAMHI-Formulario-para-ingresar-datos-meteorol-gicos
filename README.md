@@ -9,9 +9,9 @@ In this sense, the goal of this program is to maintain an internal process and a
 This Application allows daily entry of records of meteorological variables (minimum, maximum, and precipitation temperatures), 
 the application allows access to different forecasters and,shows the data in tables
 
+<br>
 
-
-  ## How to use the Web site
+  ## Web-site Preview
   
   
 **Login Page** 
