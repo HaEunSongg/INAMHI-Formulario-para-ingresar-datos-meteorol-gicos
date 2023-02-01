@@ -13,6 +13,17 @@ the application allows access to different forecasters and,shows the data in tab
 
 <img width="530" alt="loginpage" src="https://user-images.githubusercontent.com/112583089/215850760-8dc76303-4bf7-4b56-9843-6499dad17169.png">
 
+**Register** 
+
+**Welcome Page** 
+
+**View Users** 
+
+
+**Form to Add Meterological Data** 
+
+
+**View Prognostics** 
 
 
 Documentation at https://jasonwatmore.com/post/2022/11/29/angular-14-user-registration-and-login-example-tutorial
