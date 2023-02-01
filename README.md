@@ -9,23 +9,40 @@ In this sense, the goal of this program is to maintain an internal process and a
 This Application allows daily entry of records of meteorological variables (minimum, maximum, and precipitation temperatures), 
 the application allows access to different forecasters and,shows the data in tables
   
-**Login** 
+  ## Web site Introductions
+  
+  
+**Login Page** 
 
-<img width="530" alt="loginpage" src="https://user-images.githubusercontent.com/112583089/215850760-8dc76303-4bf7-4b56-9843-6499dad17169.png">
+<img width="692" alt="loginpage" src="https://user-images.githubusercontent.com/112583089/216120816-6ee18054-b6be-4e32-94f3-04d642fb8012.png">
 
-*Register** 
-*<img width="922" alt="register" src="https://user-images.githubusercontent.com/112583089/216102192-480fd0fb-1e65-401b-b063-c6e97b6d2712.png">
+**Register Page** 
+
+<img width="689" alt="register" src="https://user-images.githubusercontent.com/112583089/216120846-c48b00a7-198a-4640-888e-061cace489d6.png">
 
 
 **Welcome Page** 
 
+<img width="452" alt="welcomepage" src="https://user-images.githubusercontent.com/112583089/216120879-0d75c8ba-0c32-4f08-8c03-0caf4bbbc8fc.png">
+
+
 **View Users** 
+
+<img width="904" alt="viewusers" src="https://user-images.githubusercontent.com/112583089/216122460-d891f50b-c109-4ffa-9de0-2744fd71b9ae.png">
+
 
 
 **Form to Add Meterological Data** 
 
+<img width="692" alt="formpage" src="https://user-images.githubusercontent.com/112583089/216122426-67062bd3-6d8b-487c-b8d8-84c1eb844d6a.png">
+
+
 
 **View Prognostics** 
+
+<img width="908" alt="metroloview" src="https://user-images.githubusercontent.com/112583089/216122488-f2edee3d-ce43-4d92-bae0-1aa19273eeac.png">
+
+
 
 
 Documentation at https://jasonwatmore.com/post/2022/11/29/angular-14-user-registration-and-login-example-tutorial
