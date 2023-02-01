@@ -140,7 +140,7 @@ a {
 
 .card {
   margin-top: 5rem;
-  position: fixed;
+  position: absolute;
   width: 100%;
   align-items: center;
 }
