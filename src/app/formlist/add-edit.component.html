@@ -58,21 +58,13 @@
       <label for="No">No</label>
     </div>
   </div>
-  <br>
-  <div class="mb-3 col">
-    <label class="form-label">Username</label>
-    <input type="text" formControlName="username" class="form-control"
-      [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
-    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-      <div *ngIf="f.username.errors.required">Username is required</div>
-    </div>
-  </div>
+  <br><br>
   <div class="mb-3">
-    <button [disabled]="submitting" class="btn btn-primary">
+    <button [disabled]="submitting" class="btn btn-primary" >
       <span *ngIf="submitting" class="spinner-border spinner-border-sm me-1"></span>
       Save
     </button>
-    <a routerLink="/viewprog" class="btn btn-link">Cancel</a>
+    <a routerLink="/viewprog" class="btn btn-link" >Cancel</a>
   </div>
 </form>
 <div *ngIf="loading" class="text-center m-5">

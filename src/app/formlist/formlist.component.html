@@ -37,7 +37,7 @@
             <td>{{form.percipitation}}</td>
             <td>{{form.firstName}}</td>
             <td style="white-space: nowrap">
-                <a routerLink="edit/{{forms.id}}" class="btn btn-sm btn-primary me-1">Edit</a>
+                <a routerLink="edit/{{form.id}}" class="btn btn-sm btn-primary me-1">Edit</a>
                 <button (click)="deleteUser(form.id)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="form.isDeleting">
                     <span *ngIf="form.isDeleting" class="spinner-border spinner-border-sm"></span>
                     <span *ngIf="!form.isDeleting">Delete</span>
