@@ -8,28 +8,31 @@ import { environment } from '@environments/environment';
 import { Form } from '@app/_models';
 
 @Injectable({ providedIn: 'root' })
-export class AccountService {
-    private userSubject: BehaviorSubject<Form | null>;
-    public user: Observable<Form | null>;
+export class PrognosticService {
+    Form(value: any) {
+      throw new Error('Method not implemented.');
+    }
+    private formSubject: BehaviorSubject<Form|null>;
+    public form: Observable<Form | null>;
 
     constructor(
         private router: Router,
         private http: HttpClient
     ) {
-        this.userSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('user')!));
-        this.user = this.userSubject.asObservable();
+        this.formSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('form')!));
+        this.form = this.formSubject.asObservable();
     }
 
     public get userValue() {
-        return this.userSubject.value;
+        return this.formSubject.value;
     }
 
     from(tempmax: string, tempmin: string) {
-        return this.http.post<Form>(`${environment.apiUrl}/users/authenticate`, { tempmax, tempmin })
+        return this.http.post<Form>(`${environment.apiUrl}/form/authenticate`, { tempmax, tempmin })
             .pipe(map(form => {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                // store form prognostic details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('form', JSON.stringify(form));
-                this.userSubject.next(form);
+                this.formSubject.next(form);
                 return form;
             }));
     }
@@ -37,8 +40,8 @@ export class AccountService {
     remove() {
         // remove user from local storage and set current user to null
         localStorage.removeItem('form');
-        this.userSubject.next(null);
-        this.router.navigate(['/account/form']);
+        this.formSubject.next(null);
+        this.router.navigate(['/Formulario/form']);
     }
 
     submit(form: Form) {
@@ -59,11 +62,11 @@ export class AccountService {
                 // update stored user if the logged in user updated their own record
                 if (id == this.userValue?.id) {
                     // update local storage
-                    const user = { ...this.userValue, ...params };
-                    localStorage.setItem('form', JSON.stringify(user));
+                    const form = { ...this.userValue, ...params };
+                    localStorage.setItem('form', JSON.stringify(form));
 
                     // publish updated user to subscribers
-                    this.userSubject.next(user);
+                    this.formSubject.next(form);
                 }
                 return x;
             }));
