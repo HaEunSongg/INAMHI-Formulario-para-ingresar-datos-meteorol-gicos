@@ -12,10 +12,10 @@ the application allows access to different forecasters and,shows the data in tab
 <br>
 
   ## Web-site Preview
-- The function of this Web-Site 
-- [x]  register and login to the system 
-- [x] Input Meteorological Datas 
-- [x] view, add, edit users and the datas 
+- Function of this Web-Site 
+  - [x] Register and login to the system 
+  - [x] Input Meteorological Datas 
+  - [x] View, Add, Edit users and Meteorologica datas 
   
 **Login Page** 
 
