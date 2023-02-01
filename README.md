@@ -4,13 +4,18 @@ Angular 14 - INAMHI Formulario para ingresar datos meteorológicos
 
 
 
-INAMHI's Forecast and Alerts Directorate's mission is to execute strategic processes of generation and issuance of effective and timely Weather Forecasts for the different localities of the national territory.\
+> INAMHI's Forecast and Alerts Directorate's mission is to execute strategic processes of generation and issuance of effective and timely Weather Forecasts for the different localities of the national territory.\
 In this sense, the goal of this program is to maintain an internal process and an automated structure that makes it possible to have records of the different meteorological variables.
 This Application allows daily entry of records of meteorological variables (minimum, maximum, and precipitation temperatures), 
 the application allows access to different forecasters and,shows the data in tables
-  
-  ## Web site Introductions
-  
+
+<br>
+
+  ## Web-site Preview
+- Function of this Web-Site 
+  - [x] Register and login to the system 
+  - [x] Input Meteorological Datas 
+  - [x] View, Add, Edit users and Meteorologica datas 
   
 **Login Page** 
 
@@ -38,11 +43,20 @@ the application allows access to different forecasters and,shows the data in tab
 
 
 
-**View Prognostics** 
+**View Prognostics Meterological Data** 
 
-<img width="908" alt="metroloview" src="https://user-images.githubusercontent.com/112583089/216122488-f2edee3d-ce43-4d92-bae0-1aa19273eeac.png">
-
-
+<img width="914" alt="metroloview" src="https://user-images.githubusercontent.com/112583089/216142370-4cdefdec-bb60-49b8-87a9-4f670c46bcfb.png">
 
 
-Documentation at https://jasonwatmore.com/post/2022/11/29/angular-14-user-registration-and-login-example-tutorial
+
+## Programs 
+
+**Front-End** :
+Angular 14 / typescript/ Html / Css
+
+**Back-End** :
+PostgreSQL
+
+Documentation : https://jasonwatmore.com/post/2022/11/29/angular-14-user-registration-and-login-example-tutorial
+
+Button Style: https://getcssscan.com/css-buttons-examples
