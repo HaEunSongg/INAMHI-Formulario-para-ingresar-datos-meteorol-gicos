@@ -46,9 +46,7 @@ the application allows access to different forecasters and,shows the data in tab
 ## Programs 
 
 **Front-End**
-Angular 14 / typescript
-Html
-Css
+Angular 14 / typescript/ Html / Css
 
 **Back-End**
 PostgreSQL
