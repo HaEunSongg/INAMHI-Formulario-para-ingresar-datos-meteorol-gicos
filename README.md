@@ -61,3 +61,5 @@ PostgreSQL
 Documentation : https://jasonwatmore.com/post/2022/11/29/angular-14-user-registration-and-login-example-tutorial
 
 Button Style: https://getcssscan.com/css-buttons-examples
+
+weather forecast reporter illustration: https://www.pngwing.com/en/free-png-athmv
